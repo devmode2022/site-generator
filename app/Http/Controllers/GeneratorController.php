@@ -57,9 +57,10 @@ class GeneratorController extends Controller
         
         return response()->json([
             'message'   => 'Please visit your site follow this link ' . $app_url . '/' . $sitename,
+            'website_url' => $app_url . '/' . $sitename,
+            'login_url' => $app_url . '/' . $sitename . '/wp-admin',
             'admin_user' => $admin_user,
             'admin_pass' => $admin_pass,
-            'output'    => $output,
             'status'    => $retVal,
         ], 200);
     }

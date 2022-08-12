@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/generate-site', [GeneratorController::class, 'index'])->name('site_generate');
+Route::post('/generate-site', [GeneratorController::class, 'index'])->name('site_generate');
